@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X_UA_Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="htps://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">WELCOME</div>
+            <div class="right">
+                <ul>
+                    <li><a href="\">Home</a></li>
+                    <li><a href="\">About</a></li>
+                    <li><a href="#skills">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstsection" >
+            <div class="leftsection">
+                Hi, I am <span class="purple">
+                    Harsh Srivastava
+                    </span>
+                <div>and I am a Passionate <br>
+                    </div>
+                    <span class="purple" id="element"></span>
+            </div>
+            <div class="rightsection">
+                <img src="tech.png" alt="">
+            </div>
+        </section>
+        <hr>
+
+        <section class="secondsection">
+            <h1>Projects :</h1>
+            <section id="projects">
+                <h2>My Projects</h2>
+                <div class="divider"></div>
+                <div class="projects-container">
+                    <div class="project-card" id="project1">
+                        <div class="project-image">
+                            <img src="project1.jpg" alt="Project 1">
+                        </div>
+                        <div class="project-info">
+                            <h3>Project 1</h3>
+                            
+                            <p>A brief description of Project 1.</p>
+                            <a href="#" class="project-link">View Project</a>
+                        </div>
+                    </div>
+        
+                    <div class="project-card" id="project2">
+                        <div class="project-image">
+                            <img src="project2.jpg" alt="Project 2">
+                        </div>
+                        <div class="project-info">
+                            <h3>Project 2</h3>
+                            <p>A brief description of Project 2.</p>
+                            <a href="#" class="project-link">View Project</a>
+                        </div>
+                    </div>
+        
+                    <div class="project-card" id="project3">
+                        <div class="project-image">
+                            <img src="project3.jpg" alt="Project 3">
+                        </div>
+                        <div class="project-info">
+                            <h3>Project 3</h3>
+                            <p>A brief description of Project 3.</p>
+                            <a href="#" class="project-link">View Project</a>
+                        </div>
+                    </div>
+                    <!-- Add more project cards as needed -->
+                </div>
+            </section>
+        </section>
+
+        <hr class="section-divider">
+
+        <section id="skills">
+            <div class="skills-box">
+            <h2>My Skills</h2>
+            <div class="divider"></div> <!-- Divider line -->
+            <div class="skills-container">
+                <div class="skill">
+                    <h3>HTML</h3>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-percentage="90%"></div>
+                    </div>
+                </div>
+        
+                <div class="skill">
+                    <h3>CSS</h3>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-percentage="85%"></div>
+                    </div>
+                </div>
+        
+                <div class="skill">
+                    <h3>JavaScript</h3>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-percentage="75%"></div>
+                    </div>
+                </div>
+        
+                <!-- Add more skills as needed -->
+            </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <div class="contact-container">
+                <div class="contact-column">
+                    <a href="mailto:youremail@example.com" class="contact-link" title="Email">
+                        <img src="email-icon.png" alt="Email Icon">
+                        <span>Email</span>
+                    </a>
+                    <!-- Add more items here if needed -->
+                </div>
+                <div class="contact-column">
+                    <a href="https://www.linkedin.com/in/yourprofile" class="contact-link" title="LinkedIn" target="_blank">
+                        <img src="linkedin-icon.png" alt="LinkedIn Icon">
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/yourusername" class="contact-link" title="GitHub" target="_blank">
+                        <img src="github-icon.png" alt="GitHub Icon">
+                        <span>GitHub</span>
+                    </a>
+                    <!-- Add more items here if needed -->
+                </div>
+            </div>
+        </section>
+        
+        
+    </main>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    
+    <!-- //typing animation -->
+    <script>
+        const typed = new Typed('#element', {
+        strings: ['Programmer', 'MERN Stack Developer', 'DSA enthusiast'],
+        typeSpeed: 32,        // Speed at which the text is typed
+        backSpeed: 30,         // Speed at which the text is erased (optional)
+        backDelay: 1000,      // Delay before starting to erase (optional)
+        startDelay: 500,      // Delay before starting the typing effect (optional)
+        loop: true,           // Loop the animation indefinitely
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+    // Select all project cards
+    const projectCards = document.querySelectorAll('.project-card');
+
+    // Add fade-in effect
+    projectCards.forEach((card, index) => {
+        // Set a timeout to stagger the animation
+        setTimeout(() => {
+            card.classList.add('visible');
+        }, index * 200); // Delay each card by 200ms
+    });
+
+    // Add hover effect
+    projectCards.forEach(card => {
+        card.addEventListener('mouseover', () => {
+            card.style.transform = 'scale(1.1)';
+            card.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.2)';
+        });
+
+        card.addEventListener('mouseout', () => {
+            card.style.transform = 'scale(1)';
+            card.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+        // Select all images within project cards
+        const projectImages = document.querySelectorAll('.project-image img');
+
+        // Add event listeners to each image
+        projectImages.forEach(img => {
+            img.addEventListener('mouseover', () => {
+                img.classList.add('animated-border');
+            });
+
+            img.addEventListener('mouseout', () => {
+                img.classList.remove('animated-border');
+            });
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+    const skillBars = document.querySelectorAll('.skill-fill');
+
+    // Function to check if an element is in the viewport
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    // Function to animate skill bars
+    function animateSkillBars() {
+            skillBars.forEach(bar => {
+                if (isElementInViewport(bar)) {
+                    bar.style.width = bar.getAttribute('data-percentage');
+                }
+            });
+        }
+
+        // Check on scroll and initial load
+        window.addEventListener('scroll', animateSkillBars);
+        animateSkillBars(); // Run once on page load
+    });
+
+
+});
+
+    </script>
+</body>
+</html>
